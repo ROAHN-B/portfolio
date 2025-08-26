@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Remove default nginx static assets
-RUN rm -rf  C:\Users\rohan\Downloads\portfolio-main\portfolio-main
+RUN rm -rf /usr/share/nginx/html/*
 
 # Copy all portfolio files into NGINX web root
 COPY . /C:\Users\rohan\Downloads\portfolio-main\portfolio-main\pic.webp
@@ -14,3 +14,4 @@ COPY . /C:\Users\rohan\Downloads\portfolio-main\portfolio-main\style.css
 EXPOSE 80
 
 # Start nginx (already default CMD in base image)
+
